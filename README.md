@@ -6,7 +6,8 @@ A Github Action to automatically bump and tag master, on merge, with the latest 
 [![Stable Version](https://img.shields.io/github/v/tag/reececomo/auto-tag-release)](https://img.shields.io/github/v/tag/reececomo/auto-tag-release)
 [![Latest Release](https://img.shields.io/github/v/release/reececomo/auto-tag-release?color=%233D9970)](https://img.shields.io/github/v/release/reececomo/auto-tag-release?color=%233D9970)
 
-* Extended version of [anothrNick/github-tag-action](https://github.com/anothrNick/github-tag-action)
+* Extended version of [anothrNick/github-tag-action](https://github.com/anothrNick/github-tag-action).
+  > _Please excuse this repo is no longer a fork. It was forked initially, but had to [re-fork](https://github.com/reececomo/github-tag-action) in order to submit **some of the changes** back as a [pull request](https://github.com/anothrNick/github-tag-action/pull/13)._
 
 ### Basic Usage
 
