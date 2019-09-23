@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Config
-default_semvar_bump=$(DEFAULT_BUMP:-minor)
-dry_run_mode=$(DRY_RUN:-false)
+default_semvar_bump=${DEFAULT_BUMP:-minor}
+dry_run_mode=${DRY_RUN:-false}
 
 # get latest tag
 tag=$(git describe --tags `git rev-list --tags --max-count=1`)
@@ -28,6 +28,7 @@ fi
 # get commit logs and determine home to bump the version
 # supports #major, #minor, #patch (anything else will be '$default_semvar_bump')
 case "$log" in
+    *#skip* ) echo "#skip tag present. Skipping version"; exit 0 ;;
     *#major* ) new=$(semver bump major $tag);;
     *#minor* ) new=$(semver bump minor $tag);;
     *#patch* ) new=$(semver bump patch $tag);;
