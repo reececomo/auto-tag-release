@@ -34,7 +34,7 @@ case "$log" in
     *#patch* ) new=$(semver bump patch $tag);;
     *hot-fix* ) new=$(semver bump patch $tag);;
     *hotfix* ) new=$(semver bump patch $tag);;
-    * ) new=$(semver bump `$default_semvar_bump` $tag);;
+    * ) new=$(semver bump `echo $default_semvar_bump` $tag);;
 esac
 
 echo $new
